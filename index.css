@@ -618,4 +618,7 @@ font-size: 10px;
     transform: translateY(12px);
     /* display: none; */
   }
+  .checkedRead{
+    transform: translateY(-6.7px);
+  }
   }
