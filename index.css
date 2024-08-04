@@ -300,19 +300,22 @@ color:#10b6ee;
     width:35%;
   }
   .checkBox{
-    left: 33%;
+    left: 50%;
     position: absolute;
-   margin-right: 2rem;
+    margin-left: 9rem;
+   /* text-align: left; */
+   /* display: none; */
+
   }
 }
-
+/* 
 @media only  screen and (max-width:1253px) {
   .checkBox{
     left: 33%;
     position: absolute;
    margin-right: 2rem;
   }
-}
+} */
 @media only  screen and (max-width:1240px) {
   .container-inner{
     max-width: 45%;
