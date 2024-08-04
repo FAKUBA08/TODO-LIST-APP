@@ -13,6 +13,9 @@ const panel = document.querySelector('.panel');
 const underline = document.querySelector('.underline');
 const checkRead = document.querySelector('.checkedRead');
 const read = document.querySelector('.read');
+const count=document.querySelector('.count')
+const readMe=document.querySelector(".readMe")
+const conBtn=document.querySelector(".container-2")
 let data = '';
 let newStorage = localStorage.getItem('data') ? JSON.parse(localStorage.getItem('data')) : [];
 copiedTest(newStorage);
@@ -31,6 +34,7 @@ for (let index = 0; index < acc.length; index++) {
             display.classList.remove("readAdd");
             checkRead.style.color = 'rgba(255, 255, 255, 0.415)';
             textBox.style.color = "white";
+                 readMe.style.color="rgba(255, 255, 255, 0.539)"
         } else {
             panel.style.display = 'block';
             accordion.innerHTML = '<img src="images/icon-moon.svg" alt="">';
@@ -44,6 +48,9 @@ for (let index = 0; index < acc.length; index++) {
             display.classList.add("readAdd");
             checkRead.style.color = 'black';
             textBox.style.color = "black";
+            readMe.style.color="black"
+            readMe.classList.add("myHover")
+            conBtn.style.color="black"
         }
     });
 }
@@ -106,6 +113,12 @@ function handleDrop(event) {
 
 function copiedTest(arr) {
     display.innerHTML = '';
+
+    if (arr.length === 0) {
+        count.innerHTML = 'No items left';
+       return
+    }
+
     arr.forEach(function (el, i) {
         display.innerHTML += `<div class="items">
             <div class="checking" id="checking-${i}" style="background-color: ${el.read ? '#733BAC' : 'transparent'};">
@@ -115,7 +128,10 @@ function copiedTest(arr) {
             <div class="deleteBtn" id="delB-${i}" style="display: ${el.deleteBtnVisible ? 'block' : 'none'};" onclick="delBtn(${i})"><img src="images/icon-cross.svg" alt=""></div>
         </div><div class="underBtn"></div>`;
     });
-    if (arr.length > 3) {
+    count.innerHTML = `${arr.length} items left`;
+
+
+    if (arr.length > 6) {
         display.classList.add('scrollAdd');
         container.style.height = '30vh';
     } else {
@@ -133,10 +149,9 @@ function addCheckingEventListeners() {
         });
     });
 }
-
 function highBtn(index) {
-    const readElement = document.getElementById(`read-${index}`);
     const showElement = document.getElementById(`delB-${index}`);
+    const readElement = document.getElementById(`read-${index}`);
     const checkingElement = document.getElementById(`checking-${index}`);
     const dCheck = checkingElement.querySelector("img");
 
@@ -167,3 +182,56 @@ function delBtn(index) {
 }
 
 copiedTest(newStorage);
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('selectstart', function(e) {
+      e.preventDefault();
+    });
+  });
+  const footer = document.querySelectorAll(".footer ul li");
+  footer.forEach(items => {
+      items.addEventListener("click", function() {
+          footer.forEach(li => {
+              li.classList.remove("clicked");
+          });
+          this.classList.add("clicked");
+      });
+  });
+  
+  const all = document.querySelector(".all");
+  all.addEventListener("click", function() {
+      const updatedArr = newStorage.filter(function(el) {
+          return true;
+      });
+      copiedTest(updatedArr);
+      console.log(updatedArr);
+  });
+  
+  const active = document.querySelector(".active");
+  active.addEventListener("click", function() {
+      const updatedArr = newStorage.filter(function(el) {
+          return !el.read;
+      });
+      copiedTest(updatedArr);
+      console.log(updatedArr);
+  });
+  
+  const complete = document.querySelector(".completed");
+  complete.addEventListener("click", function() {
+      const updatedArr = newStorage.filter(function(el) {
+          return el.read;
+      });
+      console.log(updatedArr);
+      copiedTest(updatedArr);
+  });
+  const removeComplete=document.querySelector(".removeComplete")
+  removeComplete.addEventListener("click",function(){
+    localStorage.clear()
+    display.innerHTML=" "
+ 
+    if (arr.length === 0) {
+        count.innerHTML = 'No items left';
+       return
+    }
+    copiedTest(updatedArr);
+  })

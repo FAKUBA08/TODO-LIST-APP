@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline';">
+
     <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
@@ -20,7 +22,7 @@
         </div>
      <div class="write">
         <div class="details">
-            <input type="text" id="textBox" style="user-select: none;" >
+            <input type="text" id="textBox" >
             <div class="checkBox"></div>
         </div>
         <div class="underIt">
@@ -35,13 +37,25 @@
         <div class="underline">
 
         </div>
-        <div class="display">
-        
+        <div class="display"></div>
+         <div class="readMe">
+            <div class="count">No items left</div>
+          <div class="footer">
+            <ul>
+                <li class="all clicked">All</li>
+                <li class="active">Active</li>
+                <li class="completed">Completed</li>
+            </ul>
+           
+          </div>
+          <div class="removeComplete">
+            Clear Completed
         </div>
-     </div>
+         </div>
+        </div>
     </div>
     <div class="container-2">
-
+  <!-- <p>Drag and drop to recorder list</p> -->
     </div>
 </body>
 <script src="index.js"></script>

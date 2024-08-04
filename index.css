@@ -2,18 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    user-select: none;
     }
-    html{
-        user-select: none;
-    }
+ 
     .container{
     background-image: url(/images/bg-desktop-dark.jpg);
     min-height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    user-select: none;
     }
     .containerB{
     background-image: url(/images/bg-desktop-light.jpg);
@@ -26,7 +22,6 @@
     margin: 0 auto;
     transform: translateY(9rem);
     max-width: 30%;
-    user-select: none;
     display: flex;
     align-items: center;
     column-gap: 52%;
@@ -41,11 +36,18 @@
     }
     .accordion{
     cursor: pointer;
-    user-select: none;
+
     }
     .container-2{
     background-color: #181824;
     min-height: 50vh;
+    }
+    .container-2 p{
+      color: rgba(255, 255, 255, 0.633);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      transform: translateY(16rem);
+      padding-top: 4rem;
     }
     .containerTod{
     background-color:white;
@@ -73,13 +75,13 @@
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 17px;
-    cursor: pointer;
+    /* cursor: pointer; */
     }
     .checkBox{
     height: 1.3rem;
     width: 1.3rem;
     border:  1px solid #733BAC ;
-    position: relative;
+    position: absolute;
     left: 36%;
     border-radius: 80%;
     transform: translateY(-2.4rem);
@@ -90,7 +92,7 @@
     /* width: 79.5%; */
     background-color: #181824;
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: left;
     padding:1rem 0rem 2rem 0rem ;
@@ -169,8 +171,6 @@
     }
     .checkedRead p{
       align-items: center;
-        /* text-decoration: line-through; */
-        /* margitrn-bottom: 1rem; */
         }
     .checked{
     /* transform: translateY(-3px); */
@@ -243,12 +243,375 @@
     background-color: #733BAC;
     /* background-color: transparent; */
   }
-  .textBox{
-    user-select: none;
-  }
-  .no-select {
-    user-select: none;
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE10+ */
+.readMe ul li{
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
 }
+.readMe ul{
+  display: flex;
+  column-gap: 1rem;
+}
+.readMe{
+margin: 0 auto;
+max-width: 28%;
+transform: translateY(-3.5rem);
+padding: 1.4rem 0 0 .3rem;
+/* position: fixed; */
+color: rgba(255, 255, 255, 0.539);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 500;
+font-size: 13px;
+user-select: none;
+column-gap: 9.5%;
+display: flex;
+}
+.readMe ul li:hover{
+color: rgb(138, 138, 138);
+}
+.removeComplete:hover{
+  color: rgb(138, 138, 138);
+  cursor: pointer;
+}
+.myHover{
+  color: rgb(244, 22, 22);
+}
+.clicked{
+color:#10b6ee;
+}
+/* Media query */
+@media only  screen and (max-width:1312px) {
+  .container-inner{
+    max-width: 35%;
+  }
+  .display{
+    max-width: 35%;
+  }
+  .underIt{
+    max-width: 35%;
+  }
+  .underline{
+    max-width: 35%;
+  }
+  .readMe{
+    max-width: 35%;
+  }
+  input{
+    width:35%;
+  }
+  .checkBox{
+    left: 33%;
+    position: absolute;
+   margin-right: 2rem;
+  }
+}
+
+@media only  screen and (max-width:1253px) {
+  .checkBox{
+    left: 33%;
+    position: absolute;
+   margin-right: 2rem;
+  }
+}
+@media only  screen and (max-width:1240px) {
+  .container-inner{
+    max-width: 45%;
+    left: -2%;
+  }
+  .display{
+    max-width: 45%;
+  
+  }
+  .underIt{
+    max-width: 45%;
+  }
+  .underline{
+    max-width: 45%;
+  }
+  .readMe{
+    max-width: 45%;
+    column-gap: 3rem;
+  }
+  input{
+    width:45%;
+  }
+  .checkedRead{
+    padding: 0 0 0 8px;
+  }
+}
+@media only  screen and (max-width:980px) {
+  .container-inner{
+    max-width: 55%;
+    left: -2%;
+  }
+  .display{
+    max-width: 55%;
+  
+  }
+  .underIt{
+    max-width: 55%;
+  }
+  .underline{
+    max-width: 55%;
+  }
+  .readMe{
+    max-width: 55%;
+    column-gap: 5rem;
+  }
+  input{
+    width:55%;
+  }
+  .checkedRead{
+    padding: 0 0 0 8px;
+  }
+}
+@media only  screen and (max-width:920px) {
+  .container-inner{
+    max-width: 73%;
+    left: 4%;
+    position: relative;
+  }
+  .display{
+    max-width: 65%;
+  
+  }
+  .underIt{
+    max-width: 65%;
+  }
+  .underline{
+    max-width: 65%;
+  }
+  .readMe{
+    max-width: 65%;
+    column-gap: 7rem;
+  }
+  input{
+    width:65%;
+  }
+  .checkedRead{
+    padding: 0 0 0 8px;
+    position: relative;
+    left: -20%;
+  }
+}
+@media only  screen and (max-width:862px) {
+  .container-inner{
+    max-width: 89%;
+    left: 8%;
+    position: relative;
+  }
+  .display{
+    max-width: 75%;
+  
+  }
+  .underIt{
+    max-width: 75%;
+  }
+  .underline{
+    max-width: 75%;
+  }
+  .readMe{
+    max-width: 75%;
+    column-gap: 7rem;
+  }
+  input{
+    width:75%;
+  }
+  .checkedRead{
+    padding: 0 0 0 8px;
+    position: relative;
+    left: -20%;
+  }
+}
+@media only  screen and (max-width:742px) {
+  .readMe{
+    max-width: 75%;
+    column-gap: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+}
+@media only  screen and (max-width:688px) {
+  .readMe{
+    max-width: 75%;
+    column-gap: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+  }
+  .container-inner{
+    max-width: 89%;
+    left: 5%;
+    position: relative;
+  }
+  .checkedRead{
+    /* padding: 0 0 0 8px; */
+    position: relative;
+    left: -18%;
+  }
+}
+@media only  screen and (max-width:672px) {
+  .container-inner{
+    max-width: 99%;
+    left: 0;
+    position: relative;
+  }
+  .display{
+    max-width: 85%;
+  
+  }
+  .underIt{
+    max-width: 85%;
+  }
+  .underline{
+    max-width: 85%;
+  }
+  .readMe{
+    max-width: 85%;
+    /* column-gap: 7rem; */
+  }
+  input{
+    width:85%;
+  }
+  .checkedRead{
+    /* padding: 0 0 0 8px; */
+    position: relative;
+    left: -20%;
+  }
+  .todo-text{
+    position: relative;
+    left: 8%;
+  }
+}
+@media only  screen and (max-width:602px) {
+  .checkedRead{
+    /* padding: 0 0 0 8px; */
+    position: relative;
+    left: -16%;
+  }
+}
+@media only  screen and (max-width:530px) {
+  .container-inner{
+    max-width: 99%;
+    left: 0;
+    position: relative;
+  }
+  .display{
+    max-width: 95%;
+    left: 0;
+  
+  }
+  .underIt{
+    max-width: 95%;
+    left: 0;
+  }
+  .underline{
+    max-width: 95%;
+    left: 0;
+  }
+  .readMe{
+    max-width: 95%;
+    /* column-gap: 7rem; */
+    
+  }
+  input{
+    width:95%;
+    left: 0;
+  }
+  .checkedRead{
+    padding: 0 0 0 8px;
+    position: relative;
+    left: -16%;
+  }
+  .todo-text{
+    position: relative;
+    left: 4%;
+  }
+  .readMe{
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 6px 1rem 3px;
+  }
+}
+@media only  screen and (max-width:470px) {
+  .container-inner{
+    max-width: 99%;
+    left: 0;
+    position: relative;
+  }
+  .display{
+    max-width: 95%;
+  
+  }
+  .underIt{
+    max-width: 95%;
+  }
+  .underline{
+    max-width: 95%;
+  }
+  .readMe{
+    max-width: 95%;
+    /* column-gap: 7rem; */
+  }
+  input{
+    width:95%;
+  }
+  .checkedRead{
+    padding: 0 0 0 8px;
+    position: relative;
+    left: -12%;
+  }
+  .todo-text{
+    position: relative;
+    left: 4%;
+  }
+  .readMe{
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 6px 1rem 3px;
+  }
+  .container-inner{
+    max-width: 89%;
+    left: -5%;
+    position: relative;
+  }
+}
+@media only  screen and (max-width:470px) {
+  .container-inner{
+    max-width: 99%;
+    left: 0;
+    position: relative;
+  }
+}
+@media only  screen and (max-width:420px) {
+.container-inner {
+  max-width: 49%;
+  left: -17%;
+  position: relative;
+  /* display: none; */
+}.readMe{
+font-size: 10px;
+}
+.checkedRead{
+  font-size: 12px;
+  left: -17%;
+}
+}
+@media only  screen and (max-width:370px) {
+  .container-inner {
+    max-width: 49%;
+    left: -17%;
+    position: relative;
+    /* display: none; */
+  }.readMe{
+  font-size: 10px;
+  }
+  .checkedRead{
+    font-size: 12px;
+    left: -13%;
+  }
+  }
