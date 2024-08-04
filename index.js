@@ -35,6 +35,7 @@ for (let index = 0; index < acc.length; index++) {
             checkRead.style.color = 'rgba(255, 255, 255, 0.415)';
             textBox.style.color = "white";
                  readMe.style.color="rgba(255, 255, 255, 0.539)"
+                 containerTodo.style.backgroundColor="#181824"
         } else {
             panel.style.display = 'block';
             accordion.innerHTML = '<img src="images/icon-moon.svg" alt="">';
@@ -50,7 +51,7 @@ for (let index = 0; index < acc.length; index++) {
             textBox.style.color = "black";
             readMe.style.color="black"
             readMe.classList.add("myHover")
-            conBtn.style.color="black"
+            containerTodo.style.backgroundColor="white"
         }
     });
 }

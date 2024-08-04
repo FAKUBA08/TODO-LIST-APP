@@ -603,6 +603,10 @@ font-size: 10px;
   font-size: 12px;
   left: -17%;
 }
+.container-2{
+  background-color: #181824;
+  min-height: 59vh;
+  }
 }
 @media only  screen and (max-width:370px) {
   .container-inner {
