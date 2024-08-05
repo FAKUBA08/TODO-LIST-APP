@@ -225,14 +225,14 @@ document.addEventListener('DOMContentLoaded', function() {
       console.log(updatedArr);
       copiedTest(updatedArr);
   });
-  const removeComplete=document.querySelector(".removeComplete")
-  removeComplete.addEventListener("click",function(){
-    localStorage.clear()
-    display.innerHTML=" "
- 
-    if (arr.length === 0) {
-        count.innerHTML = 'No items left';
-       return
-    }
-    copiedTest(updatedArr);
-  })
+  const removeComplete = document.querySelector(".removeComplete");
+
+  removeComplete.addEventListener("click", function () {
+      newStorage = newStorage.filter(function (el) {
+          return !el.read; // Keep only items that are not read
+      });
+      copiedTest(newStorage);
+      localStorage.setItem('data', JSON.stringify(newStorage));
+      console.log(newStorage);
+  });
+  
